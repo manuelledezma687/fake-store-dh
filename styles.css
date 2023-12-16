@@ -1,0 +1,182 @@
+/* Establecer la fuente predeterminada a sans-serif */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo para el encabezado */
+header {
+    background-color: #8e44ad; /* Morado oscuro */
+    color: #ffffff; /* Blanco */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para las secciones */
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #7d3c98; /* Morado más claro */
+    background-color: white;
+}
+
+/* Estilo para etiquetas */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Estilo para botones */
+button {
+    background-color: #8e44ad; /* Morado oscuro */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Cambiar el color del botón al pasar el mouse */
+button:hover {
+    background-color: #6c3483; /* Morado más oscuro */
+}
+
+/* Estilo para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #8e44ad; /* Morado oscuro */
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilo para nodos */
+.nodo {
+    background-color: #af7ac5; /* Morado claro */
+    color: #ffffff;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Estilo para el botón de efecto */
+#efecto-boton {
+    background-color: #c0392b; /* Rojo (como en tu estilo original) */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#efecto-boton:hover {
+    background-color: #a93226; /* Rojo más oscuro (como en tu estilo original) */
+}
+
+/* Estilo para el carrusel */
+.carousel-container {
+    display: flex; /* Cambiamos display a flex */
+    overflow: auto; /* Para permitir desplazamiento horizontal en caso de muchos productos */
+}
+
+/* Estilo para cada producto */
+.product {
+    width: 300px;
+    margin: 0 10px;
+    padding: 20px;
+    border: 1px solid #7d3c98; /* Morado más claro */
+    text-align: center;
+    display: flex; /* Agregamos display flex para que los productos se muestren en línea */
+    flex-direction: column; /* Colocamos los elementos en una columna */
+    align-items: center; /* Centramos los elementos verticalmente en cada producto */
+}
+
+.product img {
+    max-width: 100%;
+    height: 50%;
+    width: 50%;
+}
+
+.price {
+    font-weight: bold;
+    color: #8e44ad; /* Morado oscuro para el precio */
+}
+
+.comprar {
+    background-color: #9b59b6; /* Morado para el botón de comprar */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: auto; /* Alinear el botón en la parte inferior del producto */
+}
+
+.comprar:hover {
+    background-color: #8e44ad; /* Morado más oscuro al pasar el mouse */
+}
+
+
+/* Estilos generales del footer */
+footer {
+    background-color: #170016; /* Fondo del footer */
+    color: #ecf0f1; /* Color del texto */
+    padding: 20px 0; /* Espaciado interno */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Estilos para cada sección del footer */
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-section h3 {
+    color: #3498db; /* Color del título de la sección */
+}
+
+.footer-section p {
+    line-height: 1.5;
+}
+
+/* Estilos para los enlaces sociales */
+.footer-section.social a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #ecf0f1; /* Color del texto */
+    transition: color 0.3s ease;
+}
+
+.footer-section.social a:hover {
+    color: #3498db; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilos para la sección inferior del footer */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.8em;
+}
+
+.footer-bottom a {
+    color: #ecf0f1; /* Color del texto */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #3498db; /* Cambia el color al pasar el mouse */
+}
