@@ -2,109 +2,172 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Web Store for Digital House members</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand button">Web Store</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productos">Catalog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#formularios">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="404.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <header class="bg-dark text-white text-center py-5">
         <h1>Web Store for Digital House members</h1>
-        <img src="./img/logo.jpg" alt="Logo" style="height: 20%; width: 20%;">
+        <img src="./img/logo.jpg" alt="Logo" class="img-fluid">
     </header>
-    <section id="productos">
-        <h2>Our Products</h2>
-        <div class="carousel-container">
-            <div class="product">
-                <img src="./img/image1.jpg" alt="Producto 1">
-                <h3>Umbrella</h3>
-                <p>Chase the sun in style with our chic umbrella – your perfect companion for sunny days. Stay cool and protected with fashion-forward design.</p>
-                <p class="price">$20.00</p>
-                <button class="comprar">Buy Ahora</button>
+
+    <section id="productos" class="container my-5">
+        <h2 class="text-center mb-4">Our Products</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./img/image1.jpg" alt="Producto 1" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Umbrella</h3>
+                        <p class="card-text">Chase the sun in style with our chic umbrella...</p>
+                        <p class="price">$20.00</p>
+                        <button class="btn btn-primary button">View Detalles</button>
+                    </div>
+                </div>
             </div>
-    
-            <div class="product">
-                <img src="./img/image2.jpg" alt="Producto 2">
-                <h3>Camping kit</h3>
-                <p>Adventure awaits! Unleash the explorer in you with our all-in-one camping kit. From starry nights to crackling campfires, gear up for unforgettable outdoor experiences.</p>
-                <p class="price">$175.00</p>
-                <button class="comprar">Buy Now</button>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./img/image2.jpg" alt="Producto 2" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Camping kit</h3>
+                        <p class="card-text">Adventure awaits! Unleash the explorer in you with our all-in-one camping kit...</p>
+                        <p class="price">$175.00</p>
+                        <a href="product-detail.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
             </div>
-    
-            <div class="product">
-                <img src="./img/image3.jpg" alt="Producto 3">
-                <h3>Scarf</h3>
-                <p>Wrap yourself in warmth and elegance with our cozy scarf collection. Elevate your winter wardrobe and embrace the season with fashionable comfort.</p>
-                <p class="price">$90.00</p>
-                <button class="comprar">Buy Now</button>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./img/image3.jpg" alt="Producto 3" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Scarf</h3>
+                        <p class="card-text">Wrap yourself in warmth and elegance with our cozy scarf collection...</p>
+                        <p class="price">$90.00</p>
+                        <a href="404.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
             </div>
-            <div class="product">
-                <img src="producto3.jpg" alt="Producto 3">
-                <h3>Producto 4</h3>
-                <p>Adventure awaits! Unleash the explorer in you with our all-in-one camping kit. From starry nights to crackling campfires, gear up for unforgettable outdoor experiences.</p>
-                <p class="price">$120.00</p>
-                <button class="comprar">Buy Now</button>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./img/producto3.jpg" alt="Producto 4" class="card-img-top button">
+                    <div class="card-body">
+                        <h3 class="card-title">Camping kit Lite</h3>
+                        <p class="card-text">Adventure awaits! Unleash the explorer in you with our all-in-one camping kit...</p>
+                        <p class="price">$120.00</p>
+                        <a href="404.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
             </div>
-            <section id="formularios">
-                <h2>Contact</h2>
-                <form id="mi-formulario">
-                    <div class="form-column">
-                        <label for="nombre">Name:</label>
-                        <input type="text" id="nombre" class="mi-clase" placeholder="Ingresa tu nombre" required>
-                    </div>
-            
-                    <div class="form-column">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" class="mi-otra-clase" placeholder="Your email" required>
-                    </div>
-            
-                    <div class="form-column">
-                        <label for="telefono">Phone:</label>
-                        <input type="tel" id="telefono" class="otra-clase" placeholder="Your phone">
-                    </div>
-            
-                    <div class="form-column">
-                        <label for="edad">Age:</label>
-                        <input type="number" id="edad" class="otra-clase" placeholder="Your age">
-                    </div>
-            
-                    <div class="form-column">
-                        <label for="ciudad">City:</label>
-                        <input type="text" id="ciudad" class="otra-clase" placeholder="Your city">
-                    </div>
-            
-                    <div class="form-column">
-                        <label for="comentarios">Comments:</label>
-                        <textarea id="comentarios" class="otra-clase" placeholder="Add a comment"></textarea>
-                    </div>
-            
-                    <div class="form-column">
-                        <button type="submit" id="enviar">Send</button>
-                    </div>
-                </form>
-            </section>
         </div>
     </section>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section about">
-                <h3>About Us</h3>
-                <p>Explore endless possibilities at Digital House Web Store – where innovation meets style. From chic accessories to outdoor essentials, discover a world of curated products tailored for the modern enthusiast. Elevate your lifestyle with quality and sophistication, brought to you by Digital House Web Store. Shop the future today.</p>
-            </div>
-            <div class="footer-section contact">
-                <h3>Contact Us</h3>
-                <p>Email: info@dhwebstore.com</p>
-                <p>Phone: +1 234 567 890</p>
-            </div>
-            <div class="footer-section social">
-                <h3>Follow Us</h3>
-                <a href="#" target="_blank">Facebook</a>
-                <a href="#" target="_blank">Twitter</a>
-                <a href="#" target="_blank">Instagram</a>
+
+    <section id="formularios" class="container mb-5">
+        <h2 class="text-center mb-4">Contact</h2>
+            <form id="mi-formulario">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nombre">Name:</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your email" required>
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="telefono">Phone:</label>
+                        <input type="tel" class="form-control" id="telefono" placeholder="Your phone">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="edad">Age:</label>
+                        <input type="number" class="form-control" id="edad" placeholder="Your age">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ciudad">City:</label>
+                    <input type="text" class="form-control" id="ciudad" placeholder="Your city">
+                </div>
+                <div class="form-group">
+                    <label for="comentarios">Comments:</label>
+                    <textarea class="form-control" id="comentarios" placeholder="Add a comment"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+    </section>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About Us</h3>
+                    <p>Explore endless possibilities at Digital House Web Store – where innovation meets style. From chic accessories to outdoor essentials, discover a world of curated products tailored for the modern enthusiast. Elevate your lifestyle with quality and sophistication, brought to you by Digital House Web Store. Shop the future today.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@dhwebstore.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Follow Us</h3>
+                    <img class="social" src="./img/facebook.png" alt="Facebook">
+                    <img class="social" src="./img/x.png" alt="Twitter">
+                    <img class="social" src="./img/insta.png" alt="Instagram">
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="text-center mt-3">
             <p>&copy; 2023 Web Store Digital House. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        // Espera a que el DOM esté completamente cargado
+        document.addEventListener("DOMContentLoaded", function() {
+            // Obtener el formulario
+            const formulario = document.getElementById("mi-formulario");
+
+            // Agregar un listener para el evento de envío del formulario
+            formulario.addEventListener("submit", function(event) {
+                // Prevenir el comportamiento predeterminado del formulario (envío a otra página)
+                event.preventDefault();
+
+                // Realizar alguna acción con los datos del formulario si es necesario
+
+                // Redireccionar a la página de confirmación
+                window.location.href = "confirmation_message.html";
+            });
+        });
+    </script>
+
 </body>
 </html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Web Store for Digital House members</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+<body>
+    <header class="bg-dark text-white text-center py-5">
+        <h1>Web Store for Digital House members</h1>
+        <img src="./img/logo.jpg" alt="Logo" class="img-fluid">
+    </header>
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Checkout Form</h2>
+        <form id="checkoutForm">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Shipping Address:</label>
+                <textarea class="form-control" id="address" placeholder="Enter your shipping address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <!-- Obtener la cantidad de la URL -->
+                <input type="text" class="form-control" id="quantity" value="" disabled>
+            </div>
+            
+            <!-- Detalles de la tarjeta de crédito -->
+            <div class="form-group">
+                <label for="cardNumber">Credit Card Number:</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="expiryDate">Expiry Date:</label>
+                    <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" class="form-control" id="cvv" placeholder="Enter CVV" required>
+                </div>
+            </div>
+            
+            <button type="button" class="btn btn-primary" id="submitOrderBtn">Submit Order</button>
+        </form>
+    </section>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About Us</h3>
+                    <p>Explore endless possibilities at Digital House Web Store – where innovation meets style. From chic accessories to outdoor essentials, discover a world of curated products tailored for the modern enthusiast. Elevate your lifestyle with quality and sophistication, brought to you by Digital House Web Store. Shop the future today.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@dhwebstore.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Follow Us</h3>
+                    <img class="social" src="./img/facebook.png" alt="Facebook">
+                    <img class="social" src="./img/x.png" alt="Twitter">
+                    <img class="social" src="./img/insta.png" alt="Instagram">
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p>&copy; 2023 Web Store Digital House. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Scripts de Bootstrap y tu propio script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // Obtener la cantidad de la URL y establecerla en el campo de cantidad
+        const urlParams = new URLSearchParams(window.location.search);
+        const quantity = urlParams.get('quantity');
+        document.getElementById("quantity").value = quantity;
+
+        // Evento de clic para el botón "Submit Order"
+        document.getElementById("submitOrderBtn").addEventListener("click", function() {
+            // Validar el formulario antes de simular el pago
+            if (validateForm()) {
+                // Simular pago exitoso
+                window.location.href = "confirmation-page.html";
+            } else {
+                alert("Por favor, complete todos los campos del formulario correctamente.");
+            }
+        });
+
+        // Función para validar el formulario (puedes expandirla según tus necesidades)
+        function validateForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const address = document.getElementById("address").value;
+            const cardNumber = document.getElementById("cardNumber").value;
+            const expiryDate = document.getElementById("expiryDate").value;
+            const cvv = document.getElementById("cvv").value;
+
+            return name !== "" && email !== "" && address !== "" && cardNumber !== "" && expiryDate !== "" && cvv !== "";
+        }
+    </script>
+
+</body>
+</html>

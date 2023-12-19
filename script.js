@@ -1,7 +1,8 @@
-// Obtener un botón y agregar un evento de clic
-const miBoton = document.querySelector("#efecto-boton");
+const bugButton = document.querySelectorAll(".button");
 
-miBoton.addEventListener("click", function() {
-    // Realizar alguna acción cuando se hace clic en el botón
-    alert("¡Se hizo clic en el botón!");
+function handleClick() {
+    alert("¡Felicitaciones! Encontraste un Bug. ¡Ve a reportarlo!");
+}
+bugButton.forEach(function(boton) {
+    boton.addEventListener("click", handleClick);
 });
